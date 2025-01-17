@@ -9,7 +9,11 @@ const cors = require('cors');
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://captico-frontend.vercel.app', // Replace with your actual frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
 
 
 // Connect to MongoDB
