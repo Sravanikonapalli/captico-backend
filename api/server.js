@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: 'https://captico-frontend.vercel.app/api', 
+  origin: 'https://captico-frontend.vercel.app', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
